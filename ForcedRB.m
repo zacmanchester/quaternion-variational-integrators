@@ -31,7 +31,7 @@ for k = 1:(length(t)-1)
     f = [phi; sqrt(1-phi'*phi)];
     qhist(:,k+1) = qmult(qhist(:,k),f);
     
-    p = 2/dt*(sqrt(1-phi'*phi)*I*phi - hat(phi)*(I*phi));
+    p = (2/dt)*(sqrt(1-phi'*phi)*I*phi - hat(phi)*(I*phi));
     whist(:,k+1) = Iinv*p;
 end
 
